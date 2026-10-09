@@ -652,6 +652,11 @@ summary:focus-visible {
     font-size: 1rem
 }
 
+.about-copy p strong {
+    color: var(--ink);
+    font-weight: 700
+}
+
 .about-copy .about-role {
     font-size: .75rem;
     text-transform: uppercase;
@@ -695,7 +700,7 @@ summary:focus-visible {
 
 .journey-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 48px;
     padding-top: 10px
 }
@@ -723,6 +728,10 @@ summary:focus-visible {
 .journey-grid p {
     font-size: .875rem;
     line-height: 1.9
+}
+
+.journey-grid p+p {
+    margin-top: 12px
 }
 
 .step-tag {
@@ -882,6 +891,35 @@ summary:focus-visible {
     margin-bottom: 24px;
     padding-right: 25px;
     line-height: 1.9
+}
+
+.reviews-section {
+    background: var(--panel);
+    border-top: 1px solid var(--line)
+}
+
+.reviews-intro {
+    max-width: 800px;
+    margin-inline: auto;
+    text-align: center
+}
+
+.reviews-intro p {
+    max-width: 580px;
+    margin: 0 auto 30px
+}
+
+.reviews-intro .button {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center
+}
+
+.reviews-source {
+    display: block;
+    margin-top: 12px;
+    font-size: .8125rem;
+    color: var(--muted)
 }
 
 .contact-section {
@@ -1787,6 +1825,11 @@ summary:focus-visible {
 }
 
 .results-intro h2 {
+    margin-bottom: 24px
+}
+
+.results-intro p {
+    max-width: 760px;
     margin-bottom: 36px
 }
 
