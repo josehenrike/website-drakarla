@@ -2012,6 +2012,21 @@ summary:focus-visible {
     object-position: center top
 }
 
+.result-slide .result-image--scalp-before {
+    position: relative;
+    overflow: hidden
+}
+
+.result-slide .result-image--scalp-before img {
+    position: absolute;
+    width: 150%;
+    max-width: none;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
 .carousel-controls {
     display: flex;
     justify-content: space-between;
