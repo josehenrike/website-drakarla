@@ -1989,7 +1989,16 @@ summary:focus-visible {
 }
 
 .result-slide .results-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr))
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    row-gap: 0
+}
+
+.result-slide .result-photo {
+    display: grid;
+    grid-row: 1 / span 2;
+    grid-template-rows: subgrid;
+    min-width: 0
 }
 
 .result-slide .result-image {
@@ -2084,7 +2093,8 @@ summary:focus-visible {
     }
 
     .result-slide .results-grid {
-        gap: 10px
+        column-gap: 10px;
+        row-gap: 0
     }
 
     .result-slide figcaption {
