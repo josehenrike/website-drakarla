@@ -25,6 +25,49 @@ window.matchMedia('(min-width: 768px)').addEventListener('change', event => {
   if (event.matches) closeMenu();
 });
 
+// Only contact intent is exposed. No URL, query string, medical topic or free text.
+// A future consent-aware analytics integration may listen to this DOM event.
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href]');
+  if (!link) return;
+  const href = link.getAttribute('href');
+  const name = href.startsWith('https://wa.me/') ? 'clique_whatsapp'
+    : href.startsWith('tel:') ? 'clique_telefone' : null;
+  if (!name) return;
+  const placement = link.closest('.site-header') ? 'cabecalho'
+    : link.classList.contains('whatsapp-float') ? 'flutuante'
+    : link.closest('.site-footer') ? 'rodape' : 'conteudo';
+  window.dispatchEvent(new CustomEvent('site:contact', {
+    detail: { event: name, placement },
+  }));
+});
+
+const dropdowns = [...document.querySelectorAll('.nav-dropdown')];
+document.addEventListener('click', event => {
+  dropdowns.forEach(dropdown => {
+    if (!dropdown.contains(event.target)) dropdown.open = false;
+  });
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') dropdowns.forEach(dropdown => {
+    if (dropdown.open) {
+      dropdown.open = false;
+      dropdown.querySelector('summary').focus();
+    }
+  });
+});
+
+// Hide the floating shortcut while the complete contact block or footer is visible.
+const floatingContact = document.querySelector('.whatsapp-float');
+if (floatingContact && 'IntersectionObserver' in window) {
+  const visible = new Set();
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target));
+    floatingContact.hidden = visible.size > 0;
+  });
+  document.querySelectorAll('.contact-section, .site-footer').forEach(element => observer.observe(element));
+}
+
 const track = document.querySelector('.carousel-track');
 if (track) {
   const slides = [...track.querySelectorAll('.result-slide')];

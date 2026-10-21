@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Prévia: páginas com meta robots noindex. Gere com --production após definir o domínio.

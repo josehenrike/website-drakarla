@@ -1,0 +1,95 @@
+const sources = {
+  causes: ['American Academy of Dermatology — causas da queda', 'https://www.aad.org/public/diseases/hair-loss/causes/18-causes'],
+  diagnosis: ['American Academy of Dermatology — diagnóstico e tratamento', 'https://www.aad.org/public/diseases/hair-loss/treatment/diagnosis-treat'],
+  scope: ['DermNet — tricoscopia', 'https://dermnetnz.org/topics/trichoscopy'],
+  male: ['British Association of Dermatologists — alopecia androgenética', 'https://www.bad.org.uk/pils/hair-loss-male-pattern-androgenetic-alopecia'],
+  female: ['American Academy of Dermatology — afinamento feminino', 'https://www.aad.org/public/diseases/hair-loss/types/female-pattern'],
+  scar: ['American Academy of Dermatology — alopecia cicatricial centrífuga central', 'https://www.aad.org/public/diseases/hair-loss/types/ccca'],
+};
+export { sources };
+export const pages = [
+  {
+    slug: 'consulta-tricologia-rio-verde', label: 'Consulta e tricoscopia',
+    title: 'Consulta e tricoscopia em Rio Verde | Dra. Karla Fonseca',
+    description: 'Conheça as etapas da consulta capilar em Rio Verde: escuta, exame do couro cabeludo, tricoscopia e acompanhamento individualizado.',
+    h1: 'Consulta e tricoscopia em Rio Verde',
+    lead: 'Uma investigação que começa pela sua história e reúne informações para orientar o cuidado com seus cabelos.',
+    sections: [
+      ['O que acontece na consulta?', 'A conversa inicial aborda quando as mudanças começaram, sua rotina de cuidados e seu histórico de saúde. Traga a lista de medicamentos e produtos que utiliza, exames anteriores e as perguntas que deseja esclarecer. O exame do couro cabeludo e dos fios complementa essa escuta.'],
+      ['O papel da tricoscopia', 'A tricoscopia utiliza ampliação para observar os fios e o couro cabeludo. É um exame não invasivo que ajuda a identificar detalhes difíceis de perceber a olho nu. As imagens podem apoiar a investigação e a comparação da evolução ao longo do acompanhamento. O exame complementa a avaliação médica; não é um tratamento.'],
+      ['Quando procurar uma avaliação?', 'Mudanças persistentes na quantidade, no volume ou no aspecto dos cabelos podem motivar uma consulta. Relate também desconforto no couro cabeludo e dúvidas sobre tratamentos anteriores. Você não precisa chegar com um diagnóstico pronto.'],
+      ['Como se preparar e agendar', 'Confirme com a equipe as orientações de preparo, os horários e os valores. O atendimento acontece na Clínica Vidas, em Rio Verde (GO). Após a avaliação, a médica explica se há necessidade de exames adicionais e combina os próximos passos do acompanhamento.'],
+    ],
+    faq: [['Preciso levar exames novos?', 'Leve os exames que já possui. A necessidade de novos exames será definida durante a avaliação.'], ['A tricoscopia substitui todos os exames?', 'Não. Os achados são interpretados junto com o histórico e o exame clínico; outros exames podem ser necessários.']],
+    sources: ['scope', 'diagnosis'], related: ['queda-de-cabelo', 'alopecia-androgenetica', 'alopecias-cicatriciais'],
+  },
+  {
+    slug: 'queda-de-cabelo', label: 'Queda de cabelo',
+    title: 'Queda de cabelo e calvície em Rio Verde | Dra. Karla Fonseca',
+    description: 'Queda persistente, falhas ou perda de volume? Entenda o que observar e como a avaliação médica investiga a queda de cabelo e a calvície.',
+    h1: 'Queda de cabelo e calvície: entender antes de tratar',
+    lead: 'Perceber mais fios caindo e notar menos volume são experiências diferentes. A avaliação ajuda a compreender o que mudou no seu caso.',
+    sections: [
+      ['Como a queda pode aparecer', 'A perda pode ser difusa, formar falhas ou se manifestar como afinamento gradual. Mudanças após uma doença, parto, perda de peso ou uso de medicamentos também podem fazer parte da história. Nem toda queda tem a mesma causa e diferentes condições podem coexistir.'],
+      ['O que merece atenção', 'Observe se a mudança persiste, se a área afetada aumenta e se há desconforto no couro cabeludo. Falhas novas, perda de sobrancelhas ou alterações visíveis na pele são informações importantes para a consulta. O aspecto isolado de uma fotografia não permite definir a causa.'],
+      ['A investigação é individual', 'A médica reúne o histórico, examina os fios e o couro cabeludo e decide se exames complementares são necessários. Esse processo ajuda a diferenciar quadros de queda, quebra dos fios e formas de alopecia. A escolha de tratamento depende dessa avaliação.'],
+      ['O que levar para a conversa', 'Anote quando percebeu a mudança e o que já tentou fazer. Se tiver fotografias antigas, exames ou receitas, leve-os. Conte como a situação afeta sua rotina e quais são suas expectativas. Não é preciso comprar um produto ou escolher uma técnica antes de agendar.'],
+    ],
+    faq: [['Toda queda é calvície?', 'Não. Calvície é uma das possibilidades, mas há diferentes causas de perda capilar que precisam ser diferenciadas na avaliação.'], ['Existe um tratamento único?', 'Não. A conduta depende da causa, das características individuais e da resposta ao acompanhamento.']],
+    sources: ['causes', 'diagnosis'], related: ['consulta-tricologia-rio-verde', 'alopecia-androgenetica', 'alopecias-cicatriciais'],
+  },
+  {
+    slug: 'alopecia-androgenetica', label: 'Alopecia androgenética',
+    title: 'Alopecia androgenética | Dra. Karla Fonseca - Rio Verde',
+    description: 'Entenda o afinamento progressivo dos fios, as apresentações em mulheres e homens e o acompanhamento da alopecia androgenética em Rio Verde.',
+    h1: 'Alopecia androgenética: cuidado ao longo do tempo',
+    lead: 'O afinamento progressivo merece uma conversa sobre diagnóstico, expectativas e continuidade do cuidado.',
+    sections: [
+      ['O que significa esse diagnóstico?', 'A alopecia androgenética envolve predisposição genética e afinamento progressivo dos fios, processo chamado miniaturização. Nos homens, é comum perceber entradas e redução de densidade no topo da cabeça. A idade de início e a intensidade variam entre as pessoas.'],
+      ['Como pode aparecer nas mulheres?', 'Nas mulheres, o afinamento pode tornar a risca mais larga e reduzir o volume, sobretudo na parte superior da cabeça. Essa aparência precisa ser diferenciada de outras causas de perda capilar. Perceber menos volume não confirma, por si só, o diagnóstico.'],
+      ['Diagnóstico e evolução', 'A avaliação considera o padrão de distribuição, a história pessoal e familiar e o exame dos fios. A tricoscopia pode complementar a observação. O acompanhamento permite comparar mudanças e discutir o plano com base na evolução de cada pessoa.'],
+      ['O que esperar do acompanhamento', 'A condição pode progredir ao longo dos anos e requer expectativas realistas. As possibilidades de tratamento são discutidas individualmente, considerando benefícios, limitações e riscos. Não há promessa de cura definitiva ou de recuperação completa; a continuidade deve ser combinada com a médica.'],
+    ],
+    faq: [['Homens e mulheres têm a mesma apresentação?', 'Os padrões podem diferir. A distribuição do afinamento é uma das informações avaliadas durante a consulta.'], ['Posso repetir o tratamento de um familiar?', 'Não escolha um tratamento apenas pela semelhança. Leve essa informação à consulta para discutir o que se aplica ao seu caso.']],
+    sources: ['male', 'female', 'scope'], related: ['consulta-tricologia-rio-verde', 'queda-de-cabelo', 'tratamentos-capilares'],
+  },
+  {
+    slug: 'alopecias-cicatriciais', label: 'Alopecias cicatriciais',
+    title: 'Alopecias cicatriciais em Rio Verde | Dra. Karla Fonseca',
+    description: 'Conheça a importância de investigar a perda capilar com alterações no couro cabeludo e como buscar avaliação para alopecias cicatriciais.',
+    h1: 'Alopecias cicatriciais: atenção ao couro cabeludo',
+    lead: 'Além da quantidade de fios, observar a pele e os sintomas ajuda a trazer informações importantes para a consulta.',
+    sections: [
+      ['Por que investigar oportunamente?', 'Algumas alopecias podem causar dano permanente aos folículos. Um exemplo é a alopecia cicatricial centrífuga central, que pode começar no topo da cabeça e ampliar a área de perda. Identificar a condição ajuda a orientar o cuidado para limitar sua progressão.'],
+      ['Sinais para contar à médica', 'Ardência, coceira, sensibilidade e pequenas elevações no couro cabeludo podem acompanhar certas formas de alopecia cicatricial. A aparência e os sintomas variam. Esses sinais não confirmam um diagnóstico, mas merecem ser relatados, especialmente se a área de perda estiver aumentando.'],
+      ['Como é feita a avaliação?', 'Na consulta, conte quando surgiram as mudanças e mostre as áreas que chamaram sua atenção. A médica examina o couro cabeludo, considera os achados da tricoscopia e define se é necessária investigação adicional. Leve registros de avaliações anteriores, caso existam.'],
+      ['Um plano com objetivos claros', 'Peça à médica que explique o diagnóstico, os objetivos do cuidado e a forma de acompanhar a evolução. A resposta é individual; não é possível prometer o retorno dos fios em áreas com dano permanente. O plano precisa ser reavaliado conforme os achados clínicos.'],
+    ],
+    faq: [['Apenas a coceira indica alopecia cicatricial?', 'Não. Coceira pode ter diferentes causas. É necessário avaliar o conjunto de sinais e o couro cabeludo.'], ['Devo esperar a área aumentar?', 'Uma mudança percebida já pode ser discutida na consulta. Não é necessário esperar uma perda mais extensa para procurar avaliação.']],
+    sources: ['scar', 'scope'], related: ['consulta-tricologia-rio-verde', 'queda-de-cabelo', 'alopecia-androgenetica'],
+  },
+];
+export const articles = [
+  {
+    slug: 'conteudos/queda-de-cabelo-quando-investigar', label: 'Queda de cabelo: quando investigar?',
+    title: 'Queda de cabelo: quando investigar? | Dra. Karla Fonseca',
+    description: 'Saiba quais mudanças observar e quais informações organizar para conversar sobre queda de cabelo na consulta.',
+    h1: 'Queda de cabelo: quando investigar?', lead: 'Transforme a percepção de uma mudança em informações úteis para a avaliação.',
+    sections: [['Observe a mudança, sem tentar fechar um diagnóstico', 'Mais fios no banho, falhas ou redução de volume podem ter explicações diferentes. Se a mudança persistir ou preocupar você, vale buscar uma avaliação. Conte se houve uma doença recente, alterações de peso, parto ou mudanças nos medicamentos.'], ['Prepare um pequeno histórico', 'Anote quando percebeu o problema, onde ele aparece e quais cuidados já tentou. Reúna exames e receitas anteriores. Na consulta, pergunte quais hipóteses serão investigadas, como será o acompanhamento e quando retornar. Esse registro ajuda a organizar a conversa, sem substituir o exame médico.']],
+    sources: ['causes'], related: ['queda-de-cabelo', 'consulta-tricologia-rio-verde'],
+  },
+  {
+    slug: 'conteudos/afinamento-capilar-feminino', label: 'Afinamento capilar feminino',
+    title: 'Afinamento capilar feminino: o que observar | Dra. Karla Fonseca',
+    description: 'Risca mais larga ou menos volume? Entenda por que o afinamento capilar feminino precisa de avaliação individualizada.',
+    h1: 'Afinamento capilar feminino: o que observar', lead: 'Às vezes, a primeira mudança é no volume, e não na quantidade de fios que caem.',
+    sections: [['Quando o cabelo parece menos denso', 'Uma risca progressivamente mais larga pode fazer parte da perda de padrão feminino. Outras condições também podem causar redução de volume. A avaliação diferencia essas possibilidades e considera sua história de saúde.'], ['Como conversar sobre suas expectativas', 'Conte quais mudanças você percebe ao pentear ou prender o cabelo. Leve fotografias anteriores, se desejar, e a lista dos produtos e medicamentos em uso. Pergunte sobre os objetivos do plano, suas limitações e como comparar a evolução nos retornos.'], ['Evite escolher pela promessa', 'Não existe uma resposta igual para todas as pessoas. A escolha do cuidado deve considerar o diagnóstico e a avaliação médica, em vez de apenas o resultado relatado por outra pessoa.']], sources: ['female'], related: ['alopecia-androgenetica', 'consulta-tricologia-rio-verde'],
+  },
+  {
+    slug: 'conteudos/como-funciona-a-tricoscopia', label: 'Como funciona a tricoscopia?',
+    title: 'Como funciona a tricoscopia? | Dra. Karla Fonseca',
+    description: 'Conheça o exame que amplia a visualização dos fios e do couro cabeludo e entenda seu papel na avaliação capilar.',
+    h1: 'Como funciona a tricoscopia?', lead: 'Um olhar ampliado sobre os fios e o couro cabeludo.',
+    sections: [['O que o exame faz', 'Um aparelho de ampliação permite observar estruturas que não são facilmente vistas a olho nu. A tricoscopia é não invasiva e auxilia a avaliação do couro cabeludo e dos fios. Em sistemas digitais, imagens podem ser registradas para comparação.'], ['O que o exame não faz', 'A tricoscopia não trata a queda de cabelo nem substitui a conversa e o exame clínico. Seus achados são interpretados no contexto de cada pessoa. Pergunte à médica o que foi observado e como isso ajuda a definir os próximos passos.'], ['Antes da consulta', 'Ao agendar, confirme as orientações de preparo com a equipe. Leve suas dúvidas e registros anteriores, se houver. Não é preciso saber qual exame será indicado antes de buscar atendimento.']], sources: ['scope'], related: ['consulta-tricologia-rio-verde', 'queda-de-cabelo'],
+  },
+];

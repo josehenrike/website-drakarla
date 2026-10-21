@@ -317,6 +317,15 @@ summary:focus-visible {
     gap: 12px
 }
 
+.hero-location {
+    display: block;
+    margin-top: 5px;
+    font-size: .85em;
+    font-weight: 400;
+    letter-spacing: .1em;
+    color: var(--muted)
+}
+
 .tiny-line {
     display: block;
     width: 30px;
@@ -2404,4 +2413,91 @@ summary:focus-visible {
     width: 13px;
     height: 13px;
     flex-shrink: 0
+}
+
+/* Clinical pages share the established palette and typography. */
+[hidden] { display: none !important; }
+.desktop-nav { gap: 15px; align-items: center; }
+.desktop-nav a, .nav-dropdown summary { font-size: .75rem; }
+.desktop-nav > a, .nav-dropdown summary { font-weight: 600; }
+.nav-dropdown { position: relative; }
+.nav-dropdown summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #d2c9bc;
+    cursor: pointer;
+    padding-block: 10px;
+    line-height: inherit;
+    list-style: none;
+}
+.nav-dropdown summary::-webkit-details-marker { display: none; }
+.nav-dropdown summary::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+}
+.nav-dropdown[open] summary::after { transform: translateY(2px) rotate(225deg); }
+.nav-dropdown summary:hover, .nav-dropdown[open] summary { color: var(--gold); }
+.nav-dropdown > div { position: absolute; top: 100%; left: 0; width: 240px; background: var(--panel); border: 1px solid var(--line); padding: 12px; box-shadow: 0 12px 30px #0005; }
+.nav-dropdown a { display: block; padding: 12px; }
+[aria-current="page"] { color: var(--gold); }
+.topic-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.topic-card { display: flex; flex-direction: column; padding: 30px; border: 1px solid var(--line); background: var(--panel); transition: border-color .2s; }
+.topic-card:hover { border-color: var(--gold); }
+.topic-card h3 { font-size: 1.7rem; }
+.topic-card .text-link { margin-top: auto; align-self: flex-start; }
+.topic-card .eyebrow { font-size: .65rem; }
+.page-hero { padding-top: 64px; padding-bottom: 64px; }
+.page-hero h1 { max-width: 960px; font-size: clamp(2.3rem, 4.6vw, 4.3rem); }
+.page-lead { max-width: 740px; font-size: 1.15rem; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 12px; font-size: .8rem; margin-bottom: 40px; color: var(--muted); }
+.breadcrumbs a { text-decoration: underline; text-underline-offset: 4px; }
+.article-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr); gap: 72px; align-items: start; }
+.clinical-copy section { margin-bottom: 48px; }
+.clinical-copy h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
+.clinical-copy p { line-height: 1.9; }
+.care-sidebar { position: sticky; top: 125px; padding: 28px; border: 1px solid var(--line); background: var(--panel); }
+.care-sidebar h2 { font-size: 2rem; }
+.care-sidebar .contact-phone { display: block; margin-block: 20px; }
+.related-section { padding-top: 64px; padding-bottom: 80px; }
+.editorial-note { padding: 28px; border-top: 1px solid var(--line); font-size: .85rem; overflow-wrap: anywhere; }
+.editorial-note h3 { font-size: 1.25rem; }
+.editorial-note a { text-decoration: underline; text-underline-offset: 3px; }
+.editorial-note li { margin-bottom: 12px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-block: 24px; font-size: .85rem; }
+.footer-address { font-size: .8rem; }
+.journey-bottom { gap: 28px; flex-wrap: wrap; }
+.treatment-context { font-size: .85rem; }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header-inner { flex-wrap: wrap; padding-block: 12px; }
+  .desktop-nav { display: flex; order: 3; width: 100%; justify-content: center; flex-wrap: wrap; }
+}
+@media (max-width: 767px) {
+  .topic-grid, .article-layout { grid-template-columns: 1fr; }
+  .topic-card { padding: 24px; }
+  .page-hero { padding-top: 32px; padding-bottom: 40px; }
+  .page-hero .button { width: 100%; white-space: normal; text-align: center; }
+  .page-lead { font-size: 1rem; }
+  .breadcrumbs { margin-bottom: 28px; font-size: .75rem; }
+  .article-layout { gap: 24px; }
+  .care-sidebar { position: static; }
+  .related-section { padding-block: 48px; }
+  .mobile-menu { max-height: calc(100dvh - 90px); overflow-y: auto; }
+  .whatsapp-float { bottom: max(16px, env(safe-area-inset-bottom)); right: 16px; }
+  .carousel-controls { padding-right: 64px; }
+  .site-footer { padding-bottom: 32px; }
+  .hero-actions .button { white-space: normal; text-align: center; }
+}
+.header-cta { display: inline-flex; }
+@media (max-width: 767px) {
+  .header-inner { gap: 8px; }
+  .header-cta { width: 110px; min-height: 44px; padding: 9px; font-size: .65rem; line-height: 1.4; white-space: normal; text-align: center; }
+}
+@media (max-width: 359px) {
+  .site-header .brand-logo { width: 100px; }
 }
